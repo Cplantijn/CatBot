@@ -4,7 +4,6 @@ var port = process.env.PORT || 3000;
 var Slack = require('slack-client');
 var Request = require('request');
 var parseXML = require('xml2js').parseString;
-var newRelic = require('newrelic');
 
 //Substitute your own API Key here
 var myAPIKey = process.env.API_KEY;
