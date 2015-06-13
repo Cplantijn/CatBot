@@ -1,3 +1,6 @@
+var http = require('http');
+var server = http.createServer();
+var port = process.env.PORT || 3000;
 var Slack = require('slack-client');
 var Request = require('request');
 var parseXML = require('xml2js').parseString;
@@ -68,4 +71,5 @@ slack.on('message', function(message) {
 
 
 });
+server.listen(port);
 slack.login();
