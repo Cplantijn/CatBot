@@ -73,8 +73,3 @@ slack.on('message', function(message) {
 });
 server.listen(port);
 slack.login();
-
-//Ping itself to keep the app awake every 10 minutes
-setInterval(function() {
-    http.get('http://'+ process.env.APP_NAME +'.herokuapp.com');
-}, 600000);
