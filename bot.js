@@ -3,7 +3,7 @@ var Request = require('request');
 var parseXML = require('xml2js').parseString;
 
 //Substitute your own API Key here
-var myAPIKey = require('./api_key').apiKey;
+var myAPIKey = process.env.API_KEY;
 var token = myAPIKey;
 
 var slack = new Slack(token, true, true);
