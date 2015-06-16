@@ -60,8 +60,6 @@ slack.on('message', function(message) {
                         channel.send(result.response.data[0].images[0].image[0].url[0]);
                     })
                 });
-            }else{
-                channel.send('If you\'d like a picture, mention me and say "Give me a kitteh!"');
             }
         }else{
             channel.send('If you\'d like a picture, mention me and say "Give me a kitteh!"');
