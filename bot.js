@@ -57,8 +57,8 @@ slack.on('message', function(message) {
             if(trimmedMessage.indexOf('give me a kitteh') > -1){
                 Request.get({url:'http://thecatapi.com/api/images/get?format=xml&results_per_page=1&type=jpg&size=med'}, function(e, r, img){
                     parseXML(img, function(err, result){
-                        channel.send('<html><body><h1> ZOMG HTML</h1></body></html>');
-                        //channel.send(result.response.data[0].images[0].image[0].url[0]);
+                        //channel.send('<html><body><h1> ZOMG HTML</h1></body></html>');
+                        channel.send(result.response.data[0].images[0].image[0].url[0]);
                     })
                 });
             }else{
