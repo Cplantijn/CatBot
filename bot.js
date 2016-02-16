@@ -72,9 +72,5 @@ slack.on('message', function(message) {
 
 });
 
-server.listen('/', function(response) {
-  response.send('here');
-});
-
 server.listen(port);
 slack.login();
