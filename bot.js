@@ -1,5 +1,7 @@
 var http = require('http');
 var server = http.createServer();
+var express = require('express');
+var app = express();
 var port = process.env.PORT || 3000;
 var Slack = require('slack-client');
 var Request = require('request');
@@ -71,6 +73,10 @@ slack.on('message', function(message) {
 
 
 });
-
-server.listen(port);
+app.get('/', function(req, res) {
+  res.send('<h1>MEEEEEOOOOOOWWWW! Catbot is now awake!<h1>');
+});
+app.listen(port, function() {
+  console.log('cat bot is running!');
+});
 slack.login();
